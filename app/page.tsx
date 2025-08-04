@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
@@ -9,9 +12,11 @@ export default function Home() {
           AI-powered tools to support your mental health journey
         </p>
         <div className="flex justify-center">
-          <button className="btn-primary">
-            Get Started
-          </button>
+          <Link href="/auth/signin">
+            <Button size="lg">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </main>
