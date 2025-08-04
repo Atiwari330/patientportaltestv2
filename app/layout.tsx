@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
+import { QueryProvider } from '@/lib/providers/query-provider'
 import './globals.css'
 
 const geist = Geist({
@@ -23,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body className="font-sans antialiased bg-gradient-to-br from-blue-50 to-slate-50 min-h-screen">
-        {children}
+        <QueryProvider>
+          {children}
+        </QueryProvider>
       </body>
     </html>
   )
