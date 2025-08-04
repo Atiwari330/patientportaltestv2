@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:push": "drizzle-kit push:pg",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
@@ -18,11 +21,15 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tabs": "^1.1.12",
     "@radix-ui/react-toast": "^1.2.14",
+    "@types/pg": "^8.15.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "drizzle-kit": "^0.31.4",
+    "drizzle-orm": "0.34.0",
     "framer-motion": "11.3.19",
     "next": "15.3.0-canary.31",
     "next-auth": "5.0.0-beta.29",
+    "postgres": "^3.4.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "tailwind-merge": "^3.3.1"
